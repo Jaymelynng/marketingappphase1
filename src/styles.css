@@ -1,0 +1,60 @@
+import React from "react";
+import "./styles.css";
+
+const Dashboard = ({ onNavigate }) => {
+  return (
+    <div className="dashboard-container">
+      {/* Header */}
+      <header className="dashboard-header">
+        <h1>✨ Welcome to Your Marketing Dashboard ✨</h1>
+        <p>Track your posts, tasks, and reminders in one place.</p>
+      </header>
+
+      {/* Stats Overview */}
+      <section className="stats-overview">
+        <div className="stats-card">
+          <h3>📅 Tasks Due Soon</h3>
+          <p>3</p>
+        </div>
+        <div className="stats-card">
+          <h3>⏳ Pending Approvals</h3>
+          <p>12</p>
+        </div>
+        <div className="stats-card">
+          <h3>📆 Upcoming Posts</h3>
+          <p>8</p>
+        </div>
+        <div className="stats-card">
+          <h3>📋 Total Media</h3>
+          <p>45</p>
+        </div>
+      </section>
+
+      {/* Daily Focus Section */}
+      <section className="daily-focus">
+        <h2>🗓️ Today's Focus</h2>
+        <div className="focus-card">
+          <p>🚀 Reminder: Schedule December Holiday Posts</p>
+          <p>📢 Tip: Use engaging GIFs for higher reach.</p>
+        </div>
+      </section>
+
+      {/* Calendar View Section */}
+      <section className="calendar-section">
+        <h2>📅 Calendar View</h2>
+        <button className="add-new-btn" onClick={() => onNavigate("calendar")}>
+          ➕ Open Calendar
+        </button>
+      </section>
+
+      {/* Quick Links */}
+      <section className="quick-links">
+        <button onClick={() => onNavigate("calendar")}>📅 Monthly View</button>
+        <button onClick={() => onNavigate("weekly")}>📆 Weekly View</button>
+        <button onClick={() => onNavigate("list")}>📋 List View</button>
+      </section>
+    </div>
+  );
+};
+
+export default Dashboard;
